@@ -1,0 +1,77 @@
+
+##DOCKERFILE TAREA
+#####################################################
+````
+# Este dockerfile instala FastXTools a partir de una imagen de biodckr/biodocker
+
+# crear un contenedor
+docker run -v /Users/Manuel/Desktop/BioinfInvRepro2016-II-master/Practicas/Uni5/DatosContenedor1:/data -it biodckr/biodocker /bin/bash
+
+# para instalar fastx_toolkit instalar previamente libgtextutils-0.7.tar.gz, este paso se hace dentro del contenedor que hemos creado.
+wget https://github.com/agordon/libgtextutils/releases/download/0.7/libgtextutils-0.7.tar.gz
+
+# destarar el archivo libgtextutils-0.7.tar.gz
+tar -xvf libgtextutils-0.7.tar.gz
+
+# ir a la carpeta del archivo que se descomprimio, desde aquí se dan los siguientes comandos.
+./configure
+
+make
+
+sudo make install
+#pasword biodocker
+
+ 
+# ahora descargar fastx_toolkit-0.0.14.tar.bz2
+gwet https://github.com/agordon/fastx_toolkit/releases/download/0.0.14/fastx_toolkit-0.0.14.tar.bz2
+
+# destarar el archivo fastx_toolkit-0.0.14.tar.bz2
+tar -xvf fastx_toolkit-0.0.14.tar.bz2
+
+# entrar a la carpeta del archivo que se descomprimio y ejecutar los siguientes comandos.
+./configure
+
+make
+
+sudo make install
+######################################################
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
